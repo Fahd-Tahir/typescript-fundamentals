@@ -18,9 +18,9 @@ let level;
 
 // if we do not specify a value to type to a var TS set it to any
 
-function render(document){
-    console.log(document);
-}
+// function render(document){
+//     console.log(document);
+// }
 
 // Arrays
 // let numbers: number[] = [1,2,3,4,5];
@@ -39,3 +39,28 @@ numbers.forEach(n => n.toString);
 let couple : [number, string] = [1, "Fahd"];
 console.log(couple[1]);
 
+
+// ENUMS
+
+// const small = 1;
+// const medium = 2;
+// const large = 3;
+
+
+// beside this we group them together and initialize one memeber
+
+enum Size{ Small = 1, Medium, Large}
+let mySize : Size = Size.Medium;
+console.log(mySize)
+
+// function
+
+function calculateIncome(income : number, taxYear: number) : number{
+    if(taxYear < 2022){
+        return income * 1.2;
+    }else {
+        return income;
+    }
+}
+
+calculateIncome(10_000,2022);
