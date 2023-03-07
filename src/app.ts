@@ -55,7 +55,7 @@ console.log(mySize)
 
 // function
 
-function calculateIncome(income : number, taxYear: number) : number{
+function calculateIncome(income : number, taxYear = 2022) : number{
     if(taxYear < 2022){
         return income * 1.2;
     }else {
@@ -63,4 +63,11 @@ function calculateIncome(income : number, taxYear: number) : number{
     }
 }
 
-calculateIncome(10_000,2022);
+calculateIncome(10_000); 
+
+// Objects
+
+let employee: {
+    readonly id: number,
+    name: string
+} = { id : 1, name: "Mosh"}
